@@ -29,23 +29,48 @@ Sang Nguyen
 - [Definitions, acronyms and abbreviations](#definitions-acronyms-and-abbreviations)
 - [Introduction](#introduction)
   - [Context](#context)
+  - [Functions to test (TODO: refine it!)](#functions-to-test-todo-refine-it)
 - [Test environment](#test-environment)
 - [Test cases](#test-cases)
 - [References](#references)
 
 # Definitions, acronyms and abbreviations
 <!-- List of any definitions, acronyms and abbreviations used in the document. -->
+* VS Code - [Visual Studio Code](https://code.visualstudio.com/) is a code editor.
 
 # Introduction
 <!-- Short introduction to the contents of the document. 
 What is in the document?
 What is the purpose of the document? -->
+TODO: add smt here!
 ## Context
 The library is meant to be used in a front end application built with React. React promotes functional programming and composition over inheritance.
 
 The application is an E-commerce store selling food products from various small producers. Users can search products by category, price, producer and various other criteria. Products can be added to a shopping cart. Shopping cart automatically updates and shows the total price. Checkout process is handled with a third-party solution.
 
 The food producers can add their products via a previously created portal. The producers can leave some fields blank if they do not want to specify some attributes like category or calories. It has been decided that the store front end is responsible for handling these missing values. Front end is also responsible for making sure that the product descriptions look similar i.e. the first word of a sentence starts with an upper-case letter and that prices are shown with two decimal accuracy.
+
+## Functions to test (TODO: refine it!)
+In order to maximize test coverage with only 10 source files, the team decided to use analytical approach that complements the decision process. Basically, visualizing dependencies between given functions shows a clear picture of what the most used functions are. If tests cover these 10 essential files, it will mean that N% (will check the number after test coverage measuring) of a code base is tested and 'insured'. Dependency Graph[[1]](#references) and Dependency Cruiser[[2]](#references) VS Code extensions were used as dependency visualizing tools. The results of visualisation are shown bellow. 
+![Dependency Graph View](../.dependencygraph/dependencygraph.UmaUIE3u.svg)  
+![Dependency Cruiser View](Screenshot%202021-10-03%20at%2019.03.19.png)
+Based on given graphs, the team found out that next functions are met criteria:
+- countBy
+- ~~difference~~
+- ~~get (??? not sure)~~
+- ~~keys~~
+- reduce
+- drop*
+- isArrayLikeObject*
+- chunk
+- toInteger
+- isEmpty
+- isSymbol
+- isArrayLike
+- isArgument
+
+`*` - shows that a function and all its dependencies are fully testable, it doesn't have deps from `.internal` 
+
 # Test environment
 <!-- Description of the chosen tools, packages, libraries, etc. including possible links to web sources (tutorials, homepages, etc). 
 Why these tools were chosen? 
@@ -59,3 +84,7 @@ If bugs or issues are found, how are they classified or categorized?
 When the tests are considered "passed"? -->
 # References
 <!-- List of any and all references used in the document. -->
+  [1] https://marketplace.visualstudio.com/items?itemName=sz-p.dependencygraph  
+  [2] https://github.com/juanallo/vscode-dependency-cruiser
+
+  
