@@ -1,0 +1,22 @@
+@startuml Testing Sequence (WIP)
+
+header COMP.SE.200-2021-2022-1
+
+title Testing View: Testing Sequence (WIP)
+
+actor Tester as user
+
+collections "Source code" as code
+
+queue "Travis CI" as cicd
+
+participant "Coveralls" as coveralls
+
+participant "NodeJs(Mocha+Chai)" as nodejs
+
+database "Database" as db
+
+
+code --> cicd : changes trigger
+
+@enduml
