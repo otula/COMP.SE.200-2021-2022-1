@@ -41,12 +41,21 @@ Sang Nguyen
 # Definitions, acronyms and abbreviations
 <!-- List of any definitions, acronyms and abbreviations used in the document. -->
 * VS Code - [Visual Studio Code](https://code.visualstudio.com/) is a code editor.
+* QA - Quality Assurance
 
 # Introduction
 <!-- Short introduction to the contents of the document. 
 What is in the document?
 What is the purpose of the document? -->
-TODO: add smt here!
+This document aims to show how to approach testing of the library in a more efficient and predictive way. The document is made of 5 main sections, which are 
+- [Definitions, acronyms and abbreviations](#definitions-acronyms-and-abbreviations) - contains all definitions, acronyms and abbreviations.
+- [Introduction](#introduction) - introduction to the document
+- [Test environment](#test-environment) - describes tools, packages, libraries, etc. of the environment. It also contains a diagram that shows the relationship between those. Basically, it gives an answer to the question: "Where to test?".
+- [Test cases](#test-cases) - this part answers to following questions: "What to test?", "How to test?", "How to evaluate?"
+- [References](#references) - contains all cites. 
+   
+The document is prepared for QA engineers (testers) to give them a good basement to start maintaining and improving the library. It contains a vital minimum of test cases so that a team may ensure that the quality of the library would not deteriorate drastically.  
+It is always worth knowing the domain of the library under test. [Context](#context) subsection is highly recommended to read first. 
 ## Context
 The library is meant to be used in a front end application built with React. React promotes functional programming and composition over inheritance.
 
@@ -114,6 +123,6 @@ TODO: elaborate this part, maybe refer to DoD
   [4] https://www.chaijs.com/  
   [5] https://www.travis-ci.com/  
   [6] https://coveralls.io/  
-  
+
 
   
