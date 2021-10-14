@@ -4,19 +4,20 @@ header COMP.SE.200-2021-2022-1
 
 title Testing View: Testing Sequence (WIP)
 
-actor Tester as user
+actor "Tester/Dev" as user
 
-collections "Source code" as code
+collections "Repository" as code
 
 queue "Travis CI" as cicd
 
 participant "Coveralls" as coveralls
 
-participant "NodeJs(Mocha+Chai)" as nodejs
-
-database "Database" as db
-
-
-code --> cicd : changes trigger
+user-->code : pushes changes to
+' code <-- cicd : observes commits and PRs
+code --> cicd : triggers
+note over cicd: runs builds and tests\r\n[nodejs, Mocha+Chai]
+cicd --> coveralls : triggers
+code <-- coveralls : changes metrics badges
+user<--code : metrics badges are visible to
 
 @enduml

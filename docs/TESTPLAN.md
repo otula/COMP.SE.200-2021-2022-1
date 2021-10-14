@@ -42,6 +42,7 @@ Sang Nguyen
 <!-- List of any definitions, acronyms and abbreviations used in the document. -->
 * VS Code - [Visual Studio Code](https://code.visualstudio.com/) is a code editor.
 * QA - Quality Assurance
+* CI - Continuous Integration
 
 # Introduction
 <!-- Short introduction to the contents of the document. 
@@ -67,8 +68,12 @@ The food producers can add their products via a previously created portal. The p
 <!-- Description of the chosen tools, packages, libraries, etc. including possible links to web sources (tutorials, homepages, etc). 
 Why these tools were chosen? 
 A (UML) diagram of your test setup. The diagram can be an activity or sequence diagram, which ever feels more natural. The diagram can be high-level (abstract), but it should illustrate how your test setup should work and how the chosen tools should interact with each other. -->
-Mocha[[3]](#references) + chai[[4]](#references), Travis CI (CI pipeline)[[5]](#references) and Coveralls[[6]](#references)  
-Draft version of sequence diagram. TODO: in order to make a right sequence I need to get grasp how CICD+coveralls+nodejs work together.
+Nowadays, testing tooling is an essential attribute of any modern project. In order to provide a convenient and comprehensive experience, we chose well-known libraries and tools in our company. They cover all team's needs, and the majority of team members are familiar with those tools.
+Mocha[[3]](#references) + chai[[4]](#references) are a perfect combination for testing. Mocha is a lightweight testing framework, while chai is an assertion library. Written tests are very declarative, and people may read them as in plain English, which means tests are kind of self documented.  
+As far as the project is hosted as open source project on GitHub[[5]](#references), there is a good CI service for that: Travis CI (CI pipeline)[[6]](#references). First of all, it is free for open source projects. Secondly, it has a broad community, and it is easy to maintain. Last but not least, it has perfect integration with GitHub. Travis CI is utilized for builds and testing.   
+Likewise, there is another service Coveralls[[7]](#references), which supports open source projects intensively. It provides some statistics regarding test coverage of the project. The team may track different metrics and ensure that the code is covered properly by test.  
+
+Draft version of sequence diagram.
 ![](../out/docs/testing_sequence/Testing%20Sequence%20(WIP).png)
 
 
@@ -121,8 +126,9 @@ TODO: elaborate this part, maybe refer to DoD
   [2] https://github.com/juanallo/vscode-dependency-cruiser  
   [3] https://mochajs.org/  
   [4] https://www.chaijs.com/  
-  [5] https://www.travis-ci.com/  
-  [6] https://coveralls.io/  
+  [5] https://github.com/  
+  [6] https://www.travis-ci.com/  
+  [7] https://coveralls.io/  
 
 
   
