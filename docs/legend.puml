@@ -1,0 +1,12 @@
+@startuml
+title Legend
+participant Participant as Foo
+actor       Actor       as actor
+database    Database    as db
+collections Repository as repo
+queue       "CI service"       as ci
+Foo -> actor : action/relationship to/with actor
+Foo -> db : action/relationship to/with database
+Foo -> repo : action/relationship to/with Repository
+Foo -> ci: action/relationship to/with CI service
+@enduml
