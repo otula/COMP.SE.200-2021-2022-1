@@ -12,6 +12,12 @@ queue "Travis CI" as cicd
 
 participant "Coveralls" as coveralls
 
+box "Possible future enhancement" #LightBlue
+    database "Database" as db
+    participant "Monitoring system" as monitoring
+end box
+
+
 user-->code : pushes changes to
 ' code <-- cicd : observes commits and PRs
 code --> cicd : triggers
@@ -19,5 +25,8 @@ note over cicd: runs builds and tests\r\n[nodejs, Mocha+Chai]
 cicd --> coveralls : triggers
 code <-- coveralls : changes metrics badges
 user<--code : metrics badges are visible to
+cicd --> db : writes logs into
+db <-- monitoring : reads data from
+user --> monitoring : uses to make analysis
 
 @enduml
