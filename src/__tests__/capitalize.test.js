@@ -1,1 +1,8 @@
-.test.js
+import capitalize from '../capitalize';
+
+
+describe('Capitalize', () => {
+  test('', () => {
+    
+  })
+});
