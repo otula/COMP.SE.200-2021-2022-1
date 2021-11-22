@@ -28,10 +28,10 @@ describe('Capitalize', () => {
       expect(capitalize(-100)).toEqual('-100')
     })
     it('Input is null', () => {
-      expect(capitalize(null)).toEqual('Null')
+      expect(capitalize(null)).toEqual('')
     })
     it('Input is undefined', () => {
-      expect(capitalize(undefined)).toEqual('Undefined')
+      expect(capitalize(undefined)).toEqual('')
     })
     it('Input is an array', () => {
       const arr = ['apples', 'oranges', 'bananas']
