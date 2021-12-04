@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "npm run test:local",
+    "test:local": "jest",
+    "test:docker": "docker build -t sta-docker:latest . && docker run --rm sta-docker:latest"
   },
   "author": "",
   "license": "MIT",
