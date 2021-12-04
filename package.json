@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "npm run test:local",
+    "test:ci": "npm run test && coveralls < ./coverage/lcov.info",
     "test:local": "jest",
     "test:docker": "docker build -t sta-docker:latest . && docker run --rm sta-docker:latest"
   },
@@ -15,6 +16,7 @@
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "babel-jest": "^27.4.2",
+    "coveralls": "^3.1.1",
     "jest": "^27.4.3"
   }
 }
