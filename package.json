@@ -5,11 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no tests are implemented yet \" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-jest": "^27.4.2",
     "jest": "^27.4.3"
   }
 }
