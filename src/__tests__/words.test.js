@@ -27,3 +27,11 @@ test('Test with found string pattern', () => {
 test('Test with unfound string pattern', () => {
     expect(words('test other', 'nomatch')).toStrictEqual([]);
 })
+
+test('Test with wrong string parameter', () => {
+    expect(() => words(6)).toThrow();
+})
+
+test('Test with wrong pattern parameter', () => {
+    expect(() => words('test string', 6)).toThrow();
+})
